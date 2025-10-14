@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<CinemaSchedule>
+  <xs:schema id="CinemaSchedule" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="CinemaSchedule" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Films">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" type="xs:int" minOccurs="0" />
+                <xs:element name="title" type="xs:string" minOccurs="0" />
+                <xs:element name="genre" type="xs:string" minOccurs="0" />
+                <xs:element name="duration" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Sessions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" type="xs:int" minOccurs="0" />
+                <xs:element name="film_id" type="xs:int" minOccurs="0" />
+                <xs:element name="start_time" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="hall" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//Films" />
+        <xs:field xpath="id" />
+      </xs:unique>
+      <xs:keyref name="Film_Sessions" refer="Constraint1">
+        <xs:selector xpath=".//Sessions" />
+        <xs:field xpath="film_id" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <Films>
+    <id>26</id>
+    <title>Новый фильм</title>
+    <genre>Ужасы</genre>
+    <duration>22</duration>
+  </Films>
+  <Films>
+    <id>27</id>
+    <title>Новый фильм</title>
+    <genre>Ужасы</genre>
+    <duration>22</duration>
+  </Films>
+  <Films>
+    <id>28</id>
+    <title>Новый фильм 2</title>
+    <genre>Ужасы</genre>
+    <duration>22</duration>
+  </Films>
+  <Films>
+    <id>29</id>
+    <title>sgsdg</title>
+    <genre>qwe</genre>
+    <duration>12</duration>
+  </Films>
+  <Sessions>
+    <id>19</id>
+    <film_id>26</film_id>
+    <start_time>2003-10-10T22:22:22+07:00</start_time>
+    <hall>3</hall>
+  </Sessions>
+  <Sessions>
+    <id>20</id>
+    <film_id>26</film_id>
+    <start_time>2003-10-10T00:00:00+07:00</start_time>
+    <hall>3</hall>
+  </Sessions>
+  <Sessions>
+    <id>21</id>
+    <film_id>29</film_id>
+    <start_time>2025-12-12T00:00:00+07:00</start_time>
+    <hall>3</hall>
+  </Sessions>
+</CinemaSchedule>
