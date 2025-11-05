@@ -16,5 +16,7 @@
         <asp:Button ID="btnAddSession" runat="server" Text="Добавить сеанс" OnClick="btnAddSession_Click" /><br />
         <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
     </form>
+    <a href="Schedule.aspx">Расписсание</a>
+    <a href="AddFilm.aspx">Добавить фильм</a>
 </body>
 </html>

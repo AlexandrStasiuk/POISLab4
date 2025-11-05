@@ -16,5 +16,7 @@
         <asp:Button ID="btnLoadXml" runat="server" Text="Загрузить из XML" OnClick="btnLoadXml_Click" />
         <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
     </form>
+    <a href="AddSession.aspx">Добавить в расписание</a>
+    <a href="AddFilm.aspx">Добавить фильм</a>
 </body>
 </html>

@@ -16,5 +16,7 @@
         <asp:Button ID="btnAdd" runat="server" Text="Добавить" OnClick="btnAdd_Click" /><br />
         <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
     </form>
+    <a href="Schedule.aspx">Расписсание</a>
+    <a href="AddSession.aspx">Добавить в расписание</a>
 </body>
 </html>
